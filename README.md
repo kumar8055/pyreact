@@ -55,7 +55,7 @@ CORS_ORIGIN_WHITELIST = (
  )
 ```
 > `Step-6`: Create serializers for the Todo model `todo/serializers.py`
-
+> `Step-7`: Create the view `todo/views.py`
 
 
 ## Frontend
