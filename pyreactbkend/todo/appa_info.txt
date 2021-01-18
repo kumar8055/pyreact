@@ -1,0 +1,14 @@
+request:
+https://evilinsult.com/generate_insult.php?lang=es&type=json
+
+response:
+{
+  "number": "317",
+  "language": "es",
+  "insult": "Meapilas",
+  "created": "2021-01-09 05:43:09",
+  "shown": "227",
+  "createdby": "",
+  "active": "1",
+  "comment": "Baptismal font pisser"
+}

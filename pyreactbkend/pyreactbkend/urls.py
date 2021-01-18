@@ -30,6 +30,10 @@ from todo import views                            # add this
 router = routers.DefaultRouter()                      # add this
 router.register(r'todos', views.TodoView, 'todo')     # add this
 
+test_view = views.TodoView.as_view({'get': 'list'})
+router.register(r'testapi', test_view, 'testapi')     # TESTING THIRDPARTY API
+
 urlpatterns = [
-    path('admin/', admin.site.urls),         path('api/', include(router.urls))                # add this
+    path('admin/', admin.site.urls),
+    path('api/', include(router.urls))                # add this
 ]

@@ -141,3 +141,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+# Developemet Tips For API changes
+Whenever we want to add new fields
+> Step1: Add the fields in the models.py,views.py,serializers.py,admin.py(if exists)
+
+> Step2: Define the null value if you are adding these fields to existing database. Then migrate those fields
+```
+python manage.py makemigrations todo
+python manage.py migrate todo
+```
+> Other wise remove the db and migrate
+```
+rm db.sqlite3
+python manage.py makemigrations
+python manage.py migrate
+---------------------------
+#---it's always a good practice to use app name always---#
+rm db.sqlite3
+python manage.py makemigrations todo
+python manage.py migrate todo
+```
